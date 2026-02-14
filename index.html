@@ -417,7 +417,7 @@
 
                 // 5. Foydalanuvchini xabarnoma qilamiz va yangi oynada telegram havolasini ochamiz
                 //    (agar mobil bo‘lsa, telegram ilovasi ochiladi, aks holda telegram web)
-                const confirmSend = confirm(`Quyidagi maʼlumotlar @Vlad_admin_ru_uz ga yuboriladi:\n\n${message}\n\n"OK" ni bosing va Telegram orqali yuboring.`);
+                const confirmSend = confirm(`Quyidagi maʼlumotlar telegram orqali Bank transfer ga yuboriladi:\n\n${message}\n\n"OK" ni bosing va Telegram orqali yuboring.`);
                 if (confirmSend) {
                     // Yangi oynada yoki shu oynada ochish (target="_blank" qilish uchun)
                     window.open(telegramUrl, '_blank');
